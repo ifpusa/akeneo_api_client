@@ -6,7 +6,10 @@ from akeneo_api_client.result import *
 import requests
 import json
 
-from logzero import logger
+import logzero, logging, os
+
+log_level = os.environ.get("AKENEO_LOG_LEVEL", "CRITICAL")
+logger = logzero.setup_logger(level=getattr(logging, log_level))
 
 import math
 

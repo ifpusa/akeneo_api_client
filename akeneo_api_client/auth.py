@@ -4,8 +4,12 @@ from akeneo_api_client.utils import urljoin
 import base64
 import json
 from time import time
+import os
 
-from logzero import logger
+import logzero, logging, os
+
+log_level = os.environ.get("AKENEO_LOG_LEVEL", "CRITICAL")
+logger = logzero.setup_logger(level=getattr(logging, log_level))
 
 
 class Auth(AuthBase):
