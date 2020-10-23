@@ -45,6 +45,8 @@ If you experience issues when importing modules, run the examples as follow:
 
 .. _docs/example_exporter.py: https://raw.githubusercontent.com/matthieudelaro/akeneo_api_client/master/docs/example_exporter.py
 
+To enable debugging export an environment variable called `AKENEO_LOG_LEVEL` to `DEBUG`.
+
 Tests
 -----
 
